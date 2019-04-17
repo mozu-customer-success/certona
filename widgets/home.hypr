@@ -1,0 +1,22 @@
+{% with pageModel.certona as certona %}
+  {% for scheme in certona.schemes %}
+    {% if scheme.scheme == model.config.scheme %}
+      <style>
+        .recommended-products {
+          scroll-snap-type: x mandatory;
+          display: flex;
+          overflow-x: scroll;
+          position: relative;
+        }
+        .recommended-products > .product {
+          scroll-snap-align: start;
+          width: 25%;
+          text-align: center;
+        }
+      </style>
+      <div class="recommended-products">
+          {% include_products "widgets/home-products" with productCodes=scheme.items as_parameter %}
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endwith %}

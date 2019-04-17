@@ -1,0 +1,19 @@
+{
+  "name": "certona",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "esm": "^3.2.22",
+    "grunt": "^1.0.4",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-mozu-appdev-sync": "^2.4.1",
+    "load-grunt-tasks": "^4.0.0",
+    "mozu-action-helpers": "^0.5.6",
+    "mozu-action-simulator": "^1.6.3",
+    "time-grunt": "^2.0.0"
+  }
+}

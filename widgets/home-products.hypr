@@ -1,0 +1,13 @@
+{% for product in model.items %}
+  <span class="product">
+    <a href="{{ pageContext.secureHost }}{{product.url}}">
+          {% if prod.mainImage.imageUrl %}
+          
+            <img src="{{ prod.mainImage.imageUrl }}?quality={{themeSettings.itemListingThumbQuality}}&max={{themeSettings.listProductThumbSize}}" alt="{{ prod.mainImage.altText }}"/>
+          {% else %}
+              <span class="mz-productlisting-imageplaceholder"><span class="mz-productlisting-imageplaceholdertext">{{ labels.productImagePlaceholder }}</span></span>
+          {% endif %}
+    </a>
+    {{product.content.productName}}
+  </span>
+{% endfor %}
